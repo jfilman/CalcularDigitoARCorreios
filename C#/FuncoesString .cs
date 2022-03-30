@@ -15,6 +15,9 @@ namespace Helper {
             int digPos7;
             int digPos8;
             int dv;
+            
+			//Caso não tenha 8 digitos, complete com zero a esquerda
+			numeroAR = numeroAR.Length < 8 ? numeroAR.PadLeft(8, '0') : numeroAR;
 
             //Resgata os dígitos individuais do número do AR
             int.TryParse(numeroAR.Substring(0, 1), out digPos1);
