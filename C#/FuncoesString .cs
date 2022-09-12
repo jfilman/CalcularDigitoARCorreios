@@ -38,8 +38,8 @@ namespace Helper {
 
             //Analisa o resto retornado para definir qual é o DV do código
             if (dv == 0) dv = 5; //Se o resto for 0, o DV é 5
-            if (dv == 1) dv = 0; //Se o resto for 1, o DV é 0
-            if (dv != 0 & dv != 1) dv = 11 - dv; //Se o resto não for 1 ou 0, ele será o resultado da subtração do número 11 pelo resto
+            else if (dv == 1) dv = 0; //Se o resto for 1, o DV é 0
+            else dv = 11 - dv; //Se o resto não for 1 ou 0, ele será o resultado da subtração do número 11 pelo resto
 
             return dv.ToString();
         }
